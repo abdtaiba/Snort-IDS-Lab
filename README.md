@@ -9,7 +9,7 @@ The testing environment consists of three virtualized components:
 - **IDS Server:** Ubuntu (running Snort in Promiscuous mode)
 - **Target Node:** Metasploitable 2
 
-## Methodology
+## Methodologyش
 The implementation involved configuring the network interface (`ens33`) in promiscuous mode to ensure full traffic visibility across the segment. Snort was configured to act as a passive monitor, utilizing a set of custom detection rules to identify specific attack signatures.
 
 ### 1. Network Reconnaissance Detection
@@ -40,7 +40,8 @@ alert tcp any any -> $HOME_NET any (msg: "Nmap Scan Detected"; flags:S; sid:1000
 
 # SQL Injection Detection
 alert tcp any any -> $HOME_NET 80 (msg: "SQL Injection Attempt Detected"; content: "union select"; nocase; sid:1000003; rev:1;)
-Conclusion
+```
+## Conclusion
 This project demonstrates the effectiveness of Snort IDS in providing deep visibility into network traffic. By implementing specific signature-based rules and ensuring proper interface configuration, it is possible to create a reliable monitoring framework capable of detecting diverse threat vectors ranging from reconnaissance to sophisticated application-layer attacks.
 
 Presented by: Abdul Aziz Taiba
