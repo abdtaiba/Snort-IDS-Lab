@@ -9,7 +9,7 @@ The testing environment consists of three virtualized components:
 - **IDS Server:** Ubuntu (running Snort in Promiscuous mode)
 - **Target Node:** Metasploitable 2
 
-## Methodologyش
+## Methodology
 The implementation involved configuring the network interface (`ens33`) in promiscuous mode to ensure full traffic visibility across the segment. Snort was configured to act as a passive monitor, utilizing a set of custom detection rules to identify specific attack signatures.
 
 ### 1. Network Reconnaissance Detection
